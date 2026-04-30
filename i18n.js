@@ -43,7 +43,7 @@ const T = {
     store_play_top: 'Get it on',
     download_note: 'The TestFlight link above is live now. App Store and Google Play will go live as each platform\'s review completes.',
     support_title: 'Support my work',
-    support_sub: 'Snozzt is a personal project, built and maintained in spare hours. If it helps you sleep a little better, a small contribution genuinely helps it keep going.',
+    support_sub: 'Snozzt is a personal project, built and maintained in spare hours. If it helps you sleep a little better, a tip really helps me keep building it.',
     support_aif_top: '用爱发电 · 支持作者',
     support_bmac_top: 'Tip a coffee',
     support_note: 'Both platforms are external — clicking opens their site in a new tab. Snozzt itself never charges for the free tier.',
