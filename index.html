@@ -4,13 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0a0d1f">
-  <title>Snozzt — Private Sleep Tracking</title>
+  <title data-i18n="page_title">Snozzt — Private Sleep Tracking</title>
   <meta name="description" content="Track sleep, snoring, and nighttime sounds — privately, on your phone. Audio never leaves your device.">
   <meta property="og:title" content="Snozzt — Private Sleep Tracking">
   <meta property="og:description" content="Track sleep, snoring, and nighttime sounds — privately, on your phone.">
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>🌙</text></svg>">
+  <script src="i18n.js" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -23,10 +24,17 @@
       <span>Snozzt</span>
     </a>
     <nav class="site-nav">
-      <a href="#features">Features</a>
-      <a href="#privacy">Privacy</a>
-      <a href="#download">Download</a>
-      <a href="#support">Support</a>
+      <a href="#features" data-i18n="nav_features">Features</a>
+      <a href="#privacy" data-i18n="nav_privacy">Privacy</a>
+      <a href="#download" data-i18n="nav_download">Download</a>
+      <a href="#support" data-i18n="nav_support">Support</a>
+      <select class="lang-switcher" id="lang-switcher" aria-label="Language">
+        <option value="en">English</option>
+        <option value="zh-Hans">简体中文</option>
+        <option value="zh-Hant">繁體中文</option>
+        <option value="ja">日本語</option>
+        <option value="ko">한국어</option>
+      </select>
     </nav>
   </header>
 
@@ -40,15 +48,15 @@
             <circle cx="20" cy="9" r=".7" opacity=".5"/>
           </svg>
         </div>
-        <h1>Sleep tracking that respects your privacy.</h1>
-        <p class="hero-sub">
+        <h1 data-i18n="hero_title">Sleep tracking that respects your privacy.</h1>
+        <p class="hero-sub" data-i18n="hero_sub">
           Snozzt records overnight, classifies what it hears on-device,
           and never sends a single byte of audio anywhere.
         </p>
         <div class="hero-cta">
-          <a href="#download" class="btn btn-primary">Get Snozzt</a>
-          <a href="#support" class="btn btn-secondary">Support my work</a>
-          <a href="#privacy" class="btn btn-secondary">How it works</a>
+          <a href="#download" class="btn btn-primary" data-i18n="cta_get">Get Snozzt</a>
+          <a href="#support" class="btn btn-secondary" data-i18n="cta_support">Support my work</a>
+          <a href="#privacy" class="btn btn-secondary" data-i18n="cta_how">How it works</a>
         </div>
       </div>
     </section>
@@ -61,8 +69,8 @@
             <path d="M9 12l2 2 4-4" stroke="#0a0d1f" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
-        <h2>Your audio stays on your phone.</h2>
-        <p>
+        <h2 data-i18n="privacy_title">Your audio stays on your phone.</h2>
+        <p data-i18n="privacy_body">
           Sound analysis runs in real time using Apple's on-device Neural Engine.
           Snozzt only stores event metadata — timestamp, what was detected,
           how confident the model was. No recordings. No uploads. No cloud.
@@ -72,7 +80,7 @@
 
     <section class="features" id="features">
       <div class="container">
-        <h2>What Snozzt detects, tracks, and shows you.</h2>
+        <h2 data-i18n="features_title">What Snozzt detects, tracks, and shows you.</h2>
 
         <div class="feature-grid">
           <article class="feature-card">
@@ -85,8 +93,8 @@
                 <path d="M9 12h6"/>
               </svg>
             </div>
-            <h3>On-device sound classification</h3>
-            <p>
+            <h3 data-i18n="f1_title">On-device sound classification</h3>
+            <p data-i18n="f1_body">
               Snoring, sleep talking, coughs, breathing, sirens, alarms,
               barking — all classified locally. No round-trip to a server.
             </p>
@@ -99,8 +107,8 @@
                 <path d="M8 16v-4M12 16V8M16 16v-2"/>
               </svg>
             </div>
-            <h3>Sleep score &amp; weekly trends</h3>
-            <p>
+            <h3 data-i18n="f2_title">Sleep score &amp; weekly trends</h3>
+            <p data-i18n="f2_body">
               Every session gets a 0–100 score from duration, restfulness,
               snoring, and disruptions. Charts show how your nights compare.
             </p>
@@ -115,8 +123,8 @@
                 <path d="M19 3l3 3"/>
               </svg>
             </div>
-            <h3>Smart wake-up</h3>
-            <p>
+            <h3 data-i18n="f3_title">Smart wake-up</h3>
+            <p data-i18n="f3_body">
               A time-sensitive alarm cuts through Sleep Focus, and a chime
               plays in-app when you're already up. Background recording
               keeps going even with the screen locked.
@@ -129,8 +137,8 @@
                 <path d="M5 8h14M5 12h14M5 16h10"/>
               </svg>
             </div>
-            <h3>Detailed event timeline</h3>
-            <p>
+            <h3 data-i18n="f4_title">Detailed event timeline</h3>
+            <p data-i18n="f4_body">
               Each session detail shows every detected sound on a chart,
               colored by class, with timestamps and confidence — so you can
               spot what woke you and when.
@@ -144,8 +152,8 @@
                 <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>
               </svg>
             </div>
-            <h3>Five languages, zero accounts</h3>
-            <p>
+            <h3 data-i18n="f5_title">Five languages, zero accounts</h3>
+            <p data-i18n="f5_body">
               English, Simplified &amp; Traditional Chinese, Japanese, Korean.
               Sign in with Apple is the only login — no email lists, no
               tracking pixels.
@@ -158,8 +166,8 @@
                 <path d="M12 2 4 5v6.5C4 16.6 7.4 21.2 12 22c4.6-.8 8-5.4 8-10.5V5l-8-3z"/>
               </svg>
             </div>
-            <h3>Optimized for overnight</h3>
-            <p>
+            <h3 data-i18n="f6_title">Optimized for overnight</h3>
+            <p data-i18n="f6_body">
               Voice-activity detection, classifier subsampling, and tuned
               audio buffers keep battery drain in check across an 8-hour
               session.
@@ -171,62 +179,62 @@
 
     <section class="download" id="download">
       <div class="container">
-        <h2>Get Snozzt</h2>
-        <p class="download-sub">Available soon. Join the beta to try it early.</p>
+        <h2 data-i18n="download_title">Get Snozzt</h2>
+        <p class="download-sub" data-i18n="download_sub">Available soon. Join the beta to try it early.</p>
 
         <div class="store-buttons">
           <a class="store-btn" href="#" data-status="coming-soon" aria-label="App Store — coming soon">
-            <div class="store-status">Coming soon</div>
+            <div class="store-status" data-i18n="store_app_status">Coming soon</div>
             <div class="store-platform">
               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="store-glyph">
                 <path d="M17.5 12.5c0-2.7 2.2-4 2.3-4-1.3-1.8-3.2-2.1-3.9-2.1-1.7-.2-3.3 1-4.1 1-.9 0-2.2-1-3.6-1-1.9 0-3.6 1.1-4.5 2.7-1.9 3.3-.5 8.2 1.4 10.9.9 1.3 2 2.8 3.4 2.7 1.4-.1 1.9-.9 3.6-.9 1.7 0 2.1.9 3.6.9 1.5 0 2.4-1.3 3.3-2.7.7-1 1.3-2.1 1.7-3.3-1.6-.6-3.2-2.2-3.2-4.2zM14.5 4.5c.8-1 1.4-2.4 1.2-3.8-1.2.1-2.6.8-3.4 1.8-.7.9-1.4 2.3-1.2 3.7 1.4.1 2.6-.7 3.4-1.7z"/>
               </svg>
               <div class="store-text">
-                <small>Download on the</small>
+                <small data-i18n="store_app_top">Download on the</small>
                 <strong>App Store</strong>
               </div>
             </div>
           </a>
 
-          <a class="store-btn" href="#" data-status="beta" aria-label="TestFlight beta — coming soon">
-            <div class="store-status">Beta access</div>
+          <a class="store-btn" href="https://testflight.apple.com/join/RcRz8zDj" target="_blank" rel="noopener noreferrer" data-status="beta" aria-label="Join the TestFlight beta">
+            <div class="store-status" data-i18n="store_tf_status">Open beta</div>
             <div class="store-platform">
               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="store-glyph">
                 <path d="M12 2 2 22h20L12 2zm0 4.8L18 19H6l6-12.2z"/>
                 <circle cx="12" cy="15" r="1.5"/>
               </svg>
               <div class="store-text">
-                <small>Try the beta on</small>
+                <small data-i18n="store_tf_top">Join the beta on</small>
                 <strong>TestFlight</strong>
               </div>
             </div>
           </a>
 
           <a class="store-btn" href="#" data-status="planned" aria-label="Google Play — planned">
-            <div class="store-status">Planned</div>
+            <div class="store-status" data-i18n="store_play_status">Planned</div>
             <div class="store-platform">
               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="store-glyph">
                 <path d="M3.6 2.4 14 12 3.6 21.6c-.5-.3-.8-.9-.8-1.6V4c0-.7.3-1.3.8-1.6zm12.7 7.8 2.6-1.5c.7-.4.7-1.4 0-1.8L16.6 5 13 8.6l3.3 3.6zm-2.4 1.4L4.7 21.4l11-6.4-2.8-3.4zm0-3.2L4.7 2.6l11 6.4-2.8 3.4z"/>
               </svg>
               <div class="store-text">
-                <small>Get it on</small>
+                <small data-i18n="store_play_top">Get it on</small>
                 <strong>Google Play</strong>
               </div>
             </div>
           </a>
         </div>
 
-        <p class="download-note">
-          The placeholders above will become real download links as each
-          platform goes live. iOS first, Android later.
+        <p class="download-note" data-i18n="download_note">
+          The TestFlight link above is live now. App Store and Google Play
+          will go live as each platform's review completes.
         </p>
       </div>
     </section>
 
     <section class="support" id="support">
       <div class="container">
-        <h2>Support my work</h2>
-        <p class="support-sub">
+        <h2 data-i18n="support_title">Support my work</h2>
+        <p class="support-sub" data-i18n="support_sub">
           Snozzt is a personal project, built and maintained in spare hours.
           If it helps you sleep a little better, a small contribution
           genuinely helps it keep going.
@@ -242,7 +250,7 @@
               <path d="M11 8.5l-1 4.5h1.7l-.5 3.5L14 11h-1.5l.5-2.5z"/>
             </svg>
             <div class="support-text">
-              <small>用爱发电 · 支持作者</small>
+              <small data-i18n="support_aif_top">用爱发电 · 支持作者</small>
               <strong>爱发电 · Aifadian</strong>
             </div>
           </a>
@@ -256,13 +264,13 @@
               <path d="M8 4c0 .5-.5 1-.5 2s.5 1.5.5 2M11 4c0 .5-.5 1-.5 2s.5 1.5.5 2M14 4c0 .5-.5 1-.5 2s.5 1.5.5 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/>
             </svg>
             <div class="support-text">
-              <small>Tip a coffee</small>
+              <small data-i18n="support_bmac_top">Tip a coffee</small>
               <strong>Buy Me a Coffee</strong>
             </div>
           </a>
         </div>
 
-        <p class="support-note">
+        <p class="support-note" data-i18n="support_note">
           Both platforms are external — clicking opens their site in a new tab.
           Snozzt itself never charges for the free tier.
         </p>
@@ -272,10 +280,10 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; 2026 Snozzt. Built with care for sleep and privacy.</p>
+      <p data-i18n="footer_copy">&copy; 2026 Snozzt. Built with care for sleep and privacy.</p>
       <nav>
-        <a href="/privacy.html">Privacy</a>
-        <a href="/support.html">Support</a>
+        <a href="/privacy.html" data-i18n="footer_privacy">Privacy</a>
+        <a href="/support.html" data-i18n="footer_support">Support</a>
       </nav>
     </div>
   </footer>

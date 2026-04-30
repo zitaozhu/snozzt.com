@@ -88,9 +88,44 @@ body {
   color: var(--text);
 }
 
+.lang-switcher {
+  appearance: none;
+  -webkit-appearance: none;
+  background: var(--bg-card);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 6px 28px 6px 10px;
+  font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' fill='%23a8b0c8'><path d='M6 8L2 4h8z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 10px;
+  transition: border-color 0.15s ease;
+}
+
+.lang-switcher:hover,
+.lang-switcher:focus {
+  border-color: var(--text-tertiary);
+  outline: none;
+}
+
+.lang-switcher option {
+  background: var(--bg-elevated);
+  color: var(--text);
+}
+
 @media (max-width: 640px) {
-  .site-nav {
+  .site-nav a {
     display: none;
+  }
+  .site-nav {
+    gap: 0;
+  }
+  .lang-switcher {
+    display: inline-block;
   }
 }
 
